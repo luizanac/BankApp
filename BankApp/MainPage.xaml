@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+			 xmlns:local="clr-namespace:BankApp"
+			 xmlns:components="clr-namespace:BankApp.Components"
+             x:Class="BankApp.MainPage">
+
+	<NavigationPage.TitleView>
+		<AbsoluteLayout HorizontalOptions="FillAndExpand">
+
+			<Button  
+				AbsoluteLayout.LayoutFlags="All"
+				AbsoluteLayout.LayoutBounds=".5, .5, 1, 1"
+				HorizontalOptions="Start"
+				FontFamily="{StaticResource MaterialFontFamily}" 
+				BackgroundColor="Black" 
+				FontSize="30"
+				TextColor="White"  
+				Text="{Static local:IconFont.Menu }" />
+
+
+			<Label 
+				AbsoluteLayout.LayoutFlags="PositionProportional"
+				AbsoluteLayout.LayoutBounds=".48, .5"
+				HorizontalOptions="CenterAndExpand"
+				HorizontalTextAlignment="Center"
+				Text="Account"
+				FontSize="Large"
+				FontAttributes="Bold"
+				TextColor="White" />
+
+		</AbsoluteLayout>
+		
+		
+	</NavigationPage.TitleView>
+
+	<ContentPage.Content>
+
+		<AbsoluteLayout 
+			VerticalOptions="FillAndExpand" 
+			HorizontalOptions="FillAndExpand"
+			BackgroundColor="Black" >
+
+			<StackLayout 
+				Padding="40,0,40,0"
+				Orientation="Vertical"
+				AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional" 
+				AbsoluteLayout.LayoutBounds=".5, .05, 1, 1">
+
+				<Label 
+					HorizontalOptions="Center"
+					FontSize="Medium"
+					Text="Total balance"
+					TextColor="White"/>
+				
+				<Label 
+					HorizontalOptions="Center"
+					Text="$19,621.78"
+					FontSize="30"
+					TextColor="White"/>
+
+				<components:BalanceGraphic />
+
+			</StackLayout>
+
+			<Frame 
+				x:Name="CardFrame"
+				CornerRadius="50">
+				
+				<StackLayout			
+					Padding="20,0,20,40"
+					Spacing="20"
+					Orientation="Vertical"
+					BackgroundColor="White">
+					
+					<StackLayout.GestureRecognizers>
+						<PanGestureRecognizer PanUpdated="PanUpdated"  />
+					</StackLayout.GestureRecognizers>
+
+					<AbsoluteLayout>
+
+						<Label 
+						AbsoluteLayout.LayoutFlags="PositionProportional"
+						AbsoluteLayout.LayoutBounds="0, 0"
+						Text="Cards"
+						FontSize="30"
+						FontAttributes="Bold"
+						TextColor="Black"/>
+
+						<BoxView 
+						AbsoluteLayout.LayoutFlags="PositionProportional"
+						AbsoluteLayout.LayoutBounds=".5, .5"
+						CornerRadius="10" 
+						WidthRequest="50" 
+						HeightRequest="8" 
+						BackgroundColor="Black" >
+						</BoxView>
+
+					</AbsoluteLayout>
+
+					<components:CreditCard CardName="Luiz A. A. Zuchinali" />
+
+					<Label Text="Transactions" TextColor="Black" FontSize="30" FontAttributes="Bold" />
+
+					<components:TransactionItem Name="Taxi" Icon="{Static local:IconFont.Taxi}" />
+					<components:TransactionItem Name="Taxi" Icon="{Static local:IconFont.Taxi}" />
+					<components:TransactionItem Name="Taxi" Icon="{Static local:IconFont.Taxi}" />
+					<components:TransactionItem Name="Taxi" Icon="{Static local:IconFont.Taxi}" />
+					<components:TransactionItem Name="Taxi" Icon="{Static local:IconFont.Taxi}" />
+					<components:TransactionItem Name="Taxi" Icon="{Static local:IconFont.Taxi}" />
+
+				</StackLayout>
+			</Frame>
+
+		</AbsoluteLayout>
+
+	</ContentPage.Content>
+
+</ContentPage>

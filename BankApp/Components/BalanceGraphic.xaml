@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FlexLayout xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+            xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+            mc:Ignorable="d"
+			JustifyContent="SpaceEvenly"
+			AlignItems="End"
+			Direction="Row"
+            x:Class="BankApp.Components.BalanceGraphic">
+
+	<FlexLayout.Resources>
+		<Style x:Key="BoxStyle" TargetType="BoxView">
+			<Setter Property="BackgroundColor" Value="White" />
+			<Setter Property="WidthRequest" Value="10" />
+			<Setter Property="CornerRadius" Value="20" />
+		</Style>
+		<Style x:Key="MonthText" TargetType="Label">
+			<Setter Property="TextColor" Value="White" />
+		</Style>
+	</FlexLayout.Resources>
+
+		<StackLayout Orientation="Vertical">
+			<BoxView 
+				Style="{StaticResource BoxStyle}"
+				HeightRequest="75" />
+
+			<Label 
+				Style="{StaticResource MonthText}"
+				Text="Oct" />
+		</StackLayout>
+
+
+		<StackLayout Orientation="Vertical" >
+			<BoxView 
+				Style="{StaticResource BoxStyle}"
+				HeightRequest="100" />
+
+			<Label 
+				Style="{StaticResource MonthText}"
+				Text="Nov" />
+		</StackLayout>
+
+		<StackLayout Orientation="Vertical" >
+			<BoxView 
+				Style="{StaticResource BoxStyle}"
+				HeightRequest="125" />
+
+			<Label 
+				Style="{StaticResource MonthText}"
+				Text="Oct" />
+		</StackLayout>
+
+		<StackLayout Orientation="Vertical" >
+
+			<BoxView 
+				Style="{StaticResource BoxStyle}"
+				BackgroundColor="HotPink" 
+				HeightRequest="150" />
+
+			<Label 
+				Style="{StaticResource MonthText}"
+				Text="Oct" />
+
+		</StackLayout>
+
+		<StackLayout Orientation="Vertical">
+			<BoxView 
+				Style="{StaticResource BoxStyle}"
+				HeightRequest="175" />
+
+			<Label 
+				Style="{StaticResource MonthText}"
+				Text="Mar" />
+		</StackLayout>
+
+		<StackLayout Orientation="Vertical">
+			<BoxView 
+				Style="{StaticResource BoxStyle}"
+				HeightRequest="200" />
+
+			<Label 
+				Style="{StaticResource MonthText}"
+				Text="Mar" />
+		</StackLayout>
+
+</FlexLayout>

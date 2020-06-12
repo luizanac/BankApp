@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Frame xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="BankApp.Components.CreditCard"
+	   
+			BackgroundColor="Black" CornerRadius="30" x:Name="NameFrame" HeightRequest="200" Padding="0">
+	
+		<AbsoluteLayout>
+			<StackLayout Orientation="Vertical" Padding="20">
+				<Label TextColor="White" FontAttributes="Bold" Text="**** 5398"  />
+
+				<Label TextColor="White" FontAttributes="Bold"  Text="Balance"  FontSize="Medium" Margin="0,25,0,0" />
+				<Label TextColor="White" FontAttributes="Bold"  Text="$4,972.12"  FontSize="Large" />
+
+			<Label TextColor="White" FontAttributes="Bold"  Text="{Binding CardName}" FontSize="Small" Margin="0,25,0,0" />
+			</StackLayout>
+
+			<Image 
+				Source="card.png" 
+				Margin="0,10,10,10" 
+				VerticalOptions="StartAndExpand" 
+				AbsoluteLayout.LayoutFlags="PositionProportional" 
+				AbsoluteLayout.LayoutBounds="1, 0" />
+
+			<Image
+				Margin="0,0,20,0" 
+				Source="card_logo.png" 
+				AbsoluteLayout.LayoutFlags="PositionProportional" 
+				AbsoluteLayout.LayoutBounds="1, .9" />
+
+		</AbsoluteLayout>
+
+</Frame>
